@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+	<table cellpadding=0>
+	<td bgcolor="#FFAA00">
+	<table cellspacing=1 obrder=0 id='tbl'>
+	<thread>
+		<tr><td>&nbsp;ㅇ</td><td>&nbsp;1행</td><td>&nbsp;2행</td><td>&nbsp;3행</td></tr>
+	</thread>
+	<tbody>
+		<tr bgcolor='#ffffff'><th>1열</th><th>1-1</th><th>1-2</th><th>1-3</th>
+		<tr bgcolor='#ffffff'><th>2열</th><th>2-1</th><th>2-2</th><th>2-3</th>
+		<tr bgcolor='#ffffff'><th>3열</th><th>3-1</th><th>3-2</th><th>3-3</th>
+	<table>
+	</table>
+	
+	<input type="button" onClick="addRow()" value="행추가"/>
+	
+	<script>
+	function addRow() {
+		let newRow = document.createElement("tr");
+		
+		let celTxt = {"n교시","체육", "음악", "미술", "기가"}
+		let newcell = document.createelement("td");
+		newCell.textContent = "체육";
+		newRow.appendchild( newcell );
+		//tbl table에 위에서 만든 newRow를 추가
+		let mytbl = document.getElementbyID("tbl");
+		let myTbody = mytbl.getElementsByTagName('tbody');
+		myTBody[0].appendchild( newRow );
+	};
+	</script>
+	
+	<body>
+	<h3> 하이퍼링크의 정의 </h3>
+	<a href='http://naver.com/' target='_blank'> 링크 열기 </a>
+	
+</html>
